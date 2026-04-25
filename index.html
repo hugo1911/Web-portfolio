@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hugo German Manzano Lopez — Desarrollador Móvil iOS, Swift & SwiftUI." />
+  <title>Hugo Manzano — iOS Developer</title>
+
+  <!-- ─── Fuentes Google ──────────────────────────────
+       Cormorant Garamond : títulos elegantes (display serif)
+       DM Sans            : cuerpo de texto (legible, moderno)
+       JetBrains Mono     : elementos técnicos / código
+  ──────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── Cursor personalizado (solo desktop) ───────── -->
+  <div class="cursor-dot"  aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ─── Orbes de fondo (decoración ambiental) ─────── -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVEGACIÓN
+  ════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <!-- Logo / Iniciales — modifica si lo deseas -->
+      <a href="#hero" class="nav-logo">HM.</a>
+
+      <!-- Links desktop -->
+      <ul class="nav-links" role="list">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact" class="nav-cta">Contacto</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa (mobile) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Menú desplegable mobile -->
+    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO — Sección principal
+  ════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+
+      <!-- Etiqueta de disponibilidad — cambia el texto si no estás disponible -->
+      <p class="hero-eyebrow fade-in" style="--delay: 0.1s">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Disponible para oportunidades
+      </p>
+
+      <!-- Nombre — cambia la clase name-last para el color outline -->
+      <h1 class="hero-name fade-in" style="--delay: 0.25s">
+        <span class="name-first">Hugo</span>
+        <span class="name-last">Manzano</span>
+      </h1>
+
+      <!-- Titular profesional -->
+      <p class="hero-title fade-in" style="--delay: 0.4s">
+        Desarrollador Móvil <span class="accent-text">iOS</span
+        ><span class="cursor-blink" aria-hidden="true">|</span>
+      </p>
+
+      <!-- Stack tecnológico -->
+      <p class="hero-stack fade-in" style="--delay: 0.55s">
+        Swift · SwiftUI · UIKit
+      </p>
+
+      <!-- Botones de acción -->
+      <div class="hero-actions fade-in" style="--delay: 0.7s">
+        <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+        <a href="#contact"  class="btn btn-ghost">Contacto</a>
+      </div>
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="scroll-hint" aria-hidden="true">
+      <span class="mono">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SOBRE MÍ — Sección 01
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num mono">01</span>
+        <h2 class="section-title reveal">Sobre mí</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Texto principal — modifica el contenido aquí -->
+        <div class="about-text reveal">
+          <p class="lead">
+            Estudiante de <em>Ingeniería en Cetys Universidad</em>,
+            próximo a graduarme en verano de 2026.
+          </p>
+          <p>
+            Me apasiona la creación de aplicaciones nativas para iOS con
+            experiencias de usuario fluidas e intuitivas. Trabajo en entorno
+            Mac y complemento mi formación con experiencia corporativa en
+            calidad de software para la <em>industria médica tecnológica</em>,
+            lo que me brinda una visión integral del ciclo de vida del software.
+          </p>
+        </div>
+
+        <!-- Tarjetas de estadísticas — modifica los valores aquí -->
+        <div class="about-stats">
+          <div class="stat-card reveal" style="--delay: 0.1s">
+            <span class="stat-num">2026</span>
+            <span class="stat-label">Graduación</span>
+          </div>
+          <div class="stat-card reveal" style="--delay: 0.2s">
+            <span class="stat-num">iOS</span>
+            <span class="stat-label">Especialidad</span>
+          </div>
+          <div class="stat-card reveal" style="--delay: 0.3s">
+            <span class="stat-num">MedTech</span>
+            <span class="stat-label">Industria actual</span>
+          </div>
+          <div class="stat-card reveal" style="--delay: 0.4s">
+            <span class="stat-num">EN/ES</span>
+            <span class="stat-label">Bilingüe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       EXPERIENCIA — Sección 02
+  ════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num mono">02</span>
+        <h2 class="section-title reveal">Experiencia</h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Añade más .timeline-item según sea necesario -->
+        <article class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Becario — Equipo de App Móvil Internacional</h3>
+              <!-- Modifica el nombre de la empresa aquí -->
+              <span class="timeline-company">Empresa de Tecnología Médica</span>
+            </div>
+
+            <!-- Tags de tecnologías usadas -->
+            <div class="tag-row">
+              <span class="tag">Agile</span>
+              <span class="tag">QA Testing</span>
+              <span class="tag">Appium</span>
+              <span class="tag">Jira</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Bilingüe EN/ES</span>
+            </div>
+
+            <p class="timeline-desc">
+              Aseguramiento de calidad y pruebas de aplicaciones móviles en un
+              entorno ágil internacional. Automatización con Appium, gestión de
+              tareas en Jira e integración continua con GitHub. Trabajo en equipo
+              multidisciplinario en inglés.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PROYECTOS — Sección 03
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num mono">03</span>
+        <h2 class="section-title reveal">Proyectos</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ── Proyecto 1 — modifica título, descripción y tags ── -->
+        <article class="project-card reveal" style="--delay: 0s">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <!-- Ícono de mapa/navegación -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+            </div>
+            <span class="project-num mono">01</span>
+          </div>
+          <h3 class="project-title">App de Navegación iOS</h3>
+          <p class="project-desc">
+            Aplicación móvil nativa con navegación en tiempo real, diseñada con
+            foco en una experiencia de usuario fluida e intuitiva sobre el mapa.
+          </p>
+          <div class="tag-row project-tags">
+            <span class="tag tag-accent">Swift</span>
+            <span class="tag tag-accent">SwiftUI</span>
+            <span class="tag tag-accent">MapKit</span>
+          </div>
+        </article>
+
+        <!-- ── Proyecto 2 ── -->
+        <article class="project-card reveal" style="--delay: 0.1s">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <!-- Ícono de trofeo/logro -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                <path d="M4 22h16"/>
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+              </svg>
+            </div>
+            <span class="project-num mono">02</span>
+          </div>
+          <h3 class="project-title">Enactus Hackathon 2025</h3>
+          <p class="project-desc">
+            Finalista Nacional en Guadalajara, México. Solución tecnológica con
+            impacto social desarrollada en equipo multidisciplinario bajo presión.
+          </p>
+          <div class="tag-row project-tags">
+            <span class="tag tag-accent">Finalista Nacional</span>
+            <span class="tag tag-accent">Equipo</span>
+            <span class="tag tag-accent">Impacto Social</span>
+          </div>
+        </article>
+
+        <!-- ── Proyecto 3 ── -->
+        <article class="project-card reveal" style="--delay: 0.2s">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <!-- Ícono de código/capas -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <span class="project-num mono">03</span>
+          </div>
+          <h3 class="project-title">Proyectos de Ingeniería</h3>
+          <p class="project-desc">
+            Backend con FastAPI y ReactPy, bases de datos Oracle SQL y modelos
+            de clasificación ML con Scikit-learn y Streamlit.
+          </p>
+          <div class="tag-row project-tags">
+            <span class="tag tag-accent">FastAPI</span>
+            <span class="tag tag-accent">Python</span>
+            <span class="tag tag-accent">ML</span>
+            <span class="tag tag-accent">Oracle SQL</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       HABILIDADES — Sección 04
+  ════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num mono">04</span>
+        <h2 class="section-title reveal">Habilidades</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Grupo 1 — modifica las habilidades aquí -->
+        <div class="skills-group reveal" style="--delay: 0s">
+          <h3 class="skills-cat">iOS &amp; Mobile</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">Swift</span>
+            <span class="skill-tag">SwiftUI</span>
+            <span class="skill-tag">UIKit</span>
+            <span class="skill-tag">MapKit</span>
+            <span class="skill-tag">Xcode</span>
+          </div>
+        </div>
+
+        <div class="skills-group reveal" style="--delay: 0.1s">
+          <h3 class="skills-cat">Calidad &amp; DevOps</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">QA Testing</span>
+            <span class="skill-tag">Appium</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="skills-group reveal" style="--delay: 0.2s">
+          <h3 class="skills-cat">Backend &amp; Data</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Oracle SQL</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="skills-group reveal" style="--delay: 0.3s">
+          <h3 class="skills-cat">Arquitectura &amp; Web</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">MVC</span>
+            <span class="skill-tag">Capas</span>
+            <span class="skill-tag">HTML / CSS / JS</span>
+            <span class="skill-tag">Agile / Scrum</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACTO — Sección 05
+  ════════════════════════════════════════════════ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num mono">05</span>
+        <h2 class="section-title reveal">Contacto</h2>
+      </div>
+
+      <div class="contact-wrap">
+        <p class="contact-lead reveal">
+          ¿Tienes una oportunidad o proyecto en mente?<br />
+          Me encantaría escucharte.
+        </p>
+
+        <div class="contact-links reveal" style="--delay: 0.15s">
+
+          <!-- ── LinkedIn — reemplaza el href con tu URL ── -->
+          <a href="" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <span class="cl-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </span>
+            <span class="cl-label">LinkedIn</span>
+            <span class="cl-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <!-- ── GitHub — reemplaza el href con tu URL ── -->
+          <a href="" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <span class="cl-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </span>
+            <span class="cl-label">GitHub</span>
+            <span class="cl-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <!-- ── Email — reemplaza el href con mailto:tu@email.com ── -->
+          <a href="" class="contact-link">
+            <span class="cl-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 7 10-7"/>
+              </svg>
+            </span>
+            <span class="cl-label">Email</span>
+            <span class="cl-arrow" aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <!-- Modifica el nombre si lo deseas -->
+        <p class="footer-name">Hugo German Manzano Lopez</p>
+        <p class="footer-right mono">Diseñado &amp; desarrollado con ♡</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
